@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@200&display=swap');
+
+
+:root{
+    --ff-logo: 'Tourney', cursive;
+}
+
 /*Reset css*/
 *{
     padding: 0;
@@ -13,8 +22,9 @@ html{
 
 }
 
-/* Header style */
+/* OLD Header style */
 #header{
+    display: none;  /*hide old header*/
     position: fixed;
     top: 0;
     left: 0;
@@ -66,7 +76,7 @@ html{
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;;
+    left: 0;
     min-width: 160px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -102,11 +112,71 @@ html{
     line-height: 46px;
 }
 
+/* END OLD Header Style */
+
+/* NEW Header Style */
+
+header {
+    --height: 100px;
+    padding: 0 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--height);
+    line-height: var(--height);
+    display: flex;
+    justify-content: space-between;
+    background:rgba(0, 0, 0, 0);
+    z-index: 99999;
+    transition: all 0.5s linear;
+}
+
+header a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+}
+
+header .header-logo,
+header .header-menu {
+    display: flex;
+}
+
+header > .header-logo > a{
+    font-size: 30px;
+    display: flex;
+    font-family: var(--ff-logo);
+}
+
+header > .header-logo > a > h3 {
+    letter-spacing: 4px;
+}
+
+header .header-menu li {
+    list-style: none;
+    display: block;
+    padding: 0 20px;
+}
+
+header > ul > li:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.hide {
+    display: none;
+}
+/* END Header Style  */
+
 /* Slider Style */
 
 #slider{
     position: relative;
-    margin-top: 46px;
+    /* margin-top: 46px; */
     padding-top: 50%;
     background: url('/assets/img/slider/slider1.jpg') top center / cover no-repeat;
 }
@@ -131,9 +201,17 @@ html{
     margin-top: 25px;
 }
 
+/* Content Style */
 
 #content{
 
+}
+
+#content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #footer{
