@@ -175,7 +175,7 @@ header > ul > li:hover {
     position: relative;
     /* margin-top: 46px; */
     padding-top: 50%;
-    background: url('/assets/imgs/slider/slider1.jpg') top center / cover no-repeat;
+    background: url('../assets/imgs/slider/slider1.jpg') top center / cover no-repeat;
 }
 
 #slider .text-content{
