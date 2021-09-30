@@ -10,13 +10,13 @@ document.addEventListener('scroll', () => {
 
     if (window.pageYOffset > 350) {
 
-        __header.style.background = 'rgba(136,198,241,1)';
+        __header.style.background = 'rgba(0,0,0,1)';
 
     }
 
     else {
 
-        __header.style.background = 'rgba(136,198,241,0)';
+        __header.style.background = 'rgba(0,0,0,0)';
 
     }
 
