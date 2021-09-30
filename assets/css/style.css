@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 
 
 :root{
@@ -162,13 +164,26 @@ header > .header-logo > a > h3 {
 } */
 
 header .header-menu li {
+    /* position: relative; */
+    margin: 0 0 0 20px;
+    font-family: 'Special Elite', cursive;
     text-transform: uppercase;
     list-style: none;
     display: block;
     padding: 0 20px;
 }
 
+header .header-logo a:hover{
+    transition: all 0.2s linear;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
 header > ul > li:hover {
+    transition: all 0.2s linear;
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -180,7 +195,7 @@ header > ul > li:hover {
 
 /* OLD Slider Style */
 
-/#slider{
+#slider{
     display: none;
     position: relative;
     /* margin-top: 46px; */
@@ -214,7 +229,6 @@ header > ul > li:hover {
 .background-video{
     display: flex;
     position: relative;
-
 }
 
 .background-video .push-video{
@@ -239,8 +253,18 @@ header > ul > li:hover {
     width: 100%;
     top: 400px;
     text-align: center;
+}
+
+.background-video .text-background-video .band-name {
     font-family: var(--ff-logo);
-    font-size: 60px;
+    font-size: 100px;
+    color: #ccc;
+}
+
+.background-video .text-background-video .band-slogan {
+    margin-top: 10px;
+    font-family: 'Ephesis', cursive;
+    font-size: 40px;
     color: #ccc;
 }
 
