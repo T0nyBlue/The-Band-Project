@@ -5,9 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 
 
-:root{
-    --ff-logo: 'Tourney', cursive;
-}
+
 
 /*Reset css*/
 *{
@@ -16,10 +14,86 @@
     box-sizing: border-box;
 }
 
+/* common */
 html{
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root{
+    --ff-logo: 'Tourney', cursive;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.btn{
+    color: #fff;
+    background-color: black;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+/* main */
 #main{
 
 }
@@ -206,7 +280,7 @@ header > ul > li:hover {
 #slider .text-content{
     position: absolute;
     bottom: 48px;
-    color: #fff;
+    color: rgb(187, 174, 174);
     width: 100%;
     /* left: 50%;
     transform: translateX(-50%); */
@@ -225,7 +299,7 @@ header > ul > li:hover {
 
 /* END OLD Slider Style */
 
-/* Change Slider to background video */
+/* CHANGE Slider to background video */
 .background-video{
     display: flex;
     position: relative;
@@ -233,12 +307,11 @@ header > ul > li:hover {
 
 .background-video .push-video{
     display: flex;
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .background-video .push-video video {
@@ -268,21 +341,202 @@ header > ul > li:hover {
     color: #ccc;
 }
 
-/* END change slider to background video */
+/* END CHANGE slider to background video */
 
 /* Content Style */
-
+/* General Content Section */
 #content{
-    margin-top: 100vh;
+    
 }
 
 #content .content-section{
     width: 800px;
-    padding: 64px 0;
+    padding: 120px 0 112px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#footer{
-
+#content .section-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
 }
+
+#content .section-sub-heading {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+/* About Section*/
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4; /*Tiếng Anh thường để 1.4, Tiếng Việt để 1.6*/
+}
+
+#content .member-list {
+    /* Đã add .row vào html */
+    margin-top: 48px;
+    /* padding: 32px; */
+}
+
+#content .member-item {
+    /* Đã add .col .col-third vào html */
+    /* Đã add .text-center vào html */
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+
+/* Tour Section */
+.tour-section {
+    background-color: black;
+}
+
+.tickets-list {
+    margin-top: 40px;
+    list-style: none;
+    background-color: #fff;
+}
+
+.tickets-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -2px;
+}
+
+/* Places */
+.places-list{
+    /* Đã add .row vào places-list html */
+    margin-top: 32px;
+}
+
+.place-item{
+    /* Đã add .col vào place-item html */
+    /* Đã add .col-third vào place-item html */
+}
+
+.place-img {
+    display: block;
+    width: 100%;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body{
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Contact Form */
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* END Content Style */
+
+/* BEGIN Map Style */
+.map-section img {
+    width: 100%;
+}
+/* END Map Style */
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list {
+    font-size: 24px;
+}
+
+#footer .social-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .social-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
