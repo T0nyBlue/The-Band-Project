@@ -400,6 +400,15 @@ header > ul > li:hover {
     border-radius: 4px;
 }
 
+#content .team-photo{
+    position: relative;
+    text-align: center;
+}
+
+#content .team-photo img {
+    margin-top: -15%;
+}   
+
 /* Tour Section */
 .tour-section {
     background-color: black;
